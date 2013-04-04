@@ -39,3 +39,6 @@ au FileType xhtml,xml so ~/.vim/ftplugin/html_autoclosetag.vim
 let g:neocomplcache_enable_at_startup = 1
 
 set tabstop=4 shiftwidth=4 expandtab
+
+"SuperTab default completion type
+let g:SuperTabDefaultCompletionType = "<c-x><c-u>"
