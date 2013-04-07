@@ -42,3 +42,13 @@ set tabstop=4 shiftwidth=4 expandtab
 
 "SuperTab default completion type
 let g:SuperTabDefaultCompletionType = "<c-x><c-u>"
+
+
+"moving between windows
+nmap <silent> <A-Up> :wincmd k<CR>
+nmap <silent> <A-Down> :wincmd j<CR>
+nmap <silent> <A-Left> :wincmd h<CR>
+nmap <silent> <A-Right> :wincmd l<CR>
+
+"remapping java correct to ctrl-1
+nmap <silent> <F1> :JavaCorrect<CR>
