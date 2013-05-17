@@ -8,8 +8,8 @@ filetype indent on
 "autocmd InsertLeave * if pumvisible() == 0|pclose|endif
 
 "Hightlight current line
-autocmd FileType javascript,html,css,php autocmd InsertLeave * set nocursorline
-autocmd FileType javascript,html,css,php autocmd InsertEnter * set cursorline
+"autocmd FileType javascript,html,css,php autocmd InsertLeave * set nocursorline
+"autocmd FileType javascript,html,css,php autocmd InsertEnter * set cursorline
 autocmd FileType javascript,html,css,php highlight CursorLine ctermbg=40 cterm=NONE
 
 "Indentation
@@ -34,7 +34,7 @@ autocmd FileType javascript,html,css,php set incsearch
 
 set number
 set background=dark
-colorscheme neverness
+colorscheme slate
 au FileType xhtml,xml so ~/.vim/ftplugin/html_autoclosetag.vim
 let g:neocomplcache_enable_at_startup = 1
 

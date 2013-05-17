@@ -136,16 +136,8 @@ snippet doc_i
 	} // END interface $1
 # class ...
 snippet class
-	/**
-	 * ${1}
-	 **/
-	class ${2:ClassName}
-	{
-		${3}
-		function ${4:__construct}(${5:argument})
-		{
-			${6:// code...}
-		}
+
+	class ${2:ClassName}{
 	}
 # define(...)
 snippet def
@@ -214,3 +206,24 @@ snippet fun
 # $... = array (...)
 snippet array
 	$${1:arrayName} = array('${2}' => ${3});${4}
+snippet test
+	public function test${1:name}(){
+
+		$this->fail("not implemented");
+	}
+snippet testthrows
+	/**
+	 * @expectedException ${1}Exception
+	 **/
+	public function test${2}(){
+
+		$this->fail("not implemented");
+	}
+
+snippet testclass
+	require_once "PHPUnit/Autoload.php";
+	
+	class ${1}Test extends PHPUnit_Framework_TestCase{
+
+	
+
