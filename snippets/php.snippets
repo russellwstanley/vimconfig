@@ -222,8 +222,20 @@ snippet testthrows
 
 snippet testclass
 	require_once "PHPUnit/Autoload.php";
+
+	$_SERVER['HTTP_HOST'] = "localhost";
+	if(!defined("INCLUDE_DIR")){
+	  define("INCLUDE_DIR", "../include/");
+	}
 	
+	require_once "../include/include.php";
+
 	class ${1}Test extends PHPUnit_Framework_TestCase{
 
-	
+	}
 
+snippet blurb
+	/**
+	*Copyright RadioActivePTE Ltd, 2013
+	*Author russell@radioactive.sg
+	*/
