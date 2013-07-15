@@ -13,17 +13,18 @@ filetype indent on
 autocmd FileType javascript,html,css,php highlight CursorLine ctermbg=40 cterm=NONE
 
 "Indentation
-autocmd FileType javascript,html,css,php set ai
-autocmd FileType javascript,html,css,php set sw=2
-autocmd FileType javascript,html,css,php set ts=2
-autocmd FileType javascript,html,css,php set sts=2
-autocmd FileType javascript,css,php set textwidth=79
+"autocmd FileType javascript,html,css,php set ai
+"autocmd FileType javascript,html,css,php set sw=2
+"autocmd FileType javascript,html,css,php set ts=2
+"autocmd FileType javascript,html,css,php set sts=2
+"autocmd FileType javascript,css,php set textwidth=79
 
 "Enable autocompletion
 autocmd FileType javascript set omnifunc=javascriptcomplete#CompleteJS
 autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd FileType python set omnifunc=pythoncomplete#Complete
+autocmd Filetype php set omnifunc=phpcomplete#CompletePHP
 
 "Enable line numbers
 autocmd FileType javascript,css,php set number
@@ -38,10 +39,10 @@ colorscheme slate
 au FileType xhtml,xml so ~/.vim/ftplugin/html_autoclosetag.vim
 let g:neocomplcache_enable_at_startup = 1
 
-set tabstop=4 shiftwidth=4 expandtab
 
 "SuperTab default completion type
-let g:SuperTabDefaultCompletionType = "<c-x><c-u>"
+let g:SuperTabDefaultCompletionType = 'context'
+
 
 
 "moving between windows
@@ -50,5 +51,10 @@ nmap <silent> <A-Down> :wincmd j<CR>
 nmap <silent> <A-Left> :wincmd h<CR>
 nmap <silent> <A-Right> :wincmd l<CR>
 
-"remapping java correct to ctrl-1
-nmap <silent> <F1> :JavaCorrect<CR>
+
+let g:debuggerPort = 9002
+
+set smartindent
+set tabstop=4 
+set shiftwidth=4 
+set expandtab
