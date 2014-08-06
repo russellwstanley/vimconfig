@@ -25,6 +25,7 @@ autocmd FileType html set omnifunc=htmlcomplete#CompleteTags
 autocmd FileType css set omnifunc=csscomplete#CompleteCSS
 autocmd FileType python set omnifunc=pythoncomplete#Complete
 autocmd Filetype php set omnifunc=phpcomplete#CompletePHP
+autocmd Filetype sql set omnifunc=sqlcomplete#Complete
 
 "Enable line numbers
 autocmd FileType javascript,css,php set number
@@ -62,3 +63,10 @@ set expandtab
 
 "Allow saving of files as sudo when I forgot to start vim using sudo.
 cmap w!! w !sudo tee > /dev/null %
+
+set foldmethod=indent   "fold based on indent
+set foldnestmax=10      "deepest fold is 10 levels
+set nofoldenable        "dont fold by default
+set foldlevel=1         "this is just what i use
+
+set runtimepath^=~/.vim/bundle/ctrlp.vim
